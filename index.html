@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/footer.css">
     <link rel="stylesheet" href="./public/css/burger.css">
-    <link rel="stylesheet" href="./public/js/modal.js">
+    <link rel="stylesheet" href="./public/css/modal.css">
     <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
     <script src="./public/js/burger.js" defer></script>
     <script src="./public/js/modal.js" defer></script>
@@ -31,105 +31,114 @@
 </head>
 
 <body>
-    <header>
-        <a href="https://www.dreamworks.com/movies/puss-in-boots-the-last-wish">
-            <img src="./public/img/dream.svg" alt="Logo da dreamworks">
-        </a>
-        <div class="divEstreia">
-            <h2>
-                Data de estreia: 13/03/2023
-            </h2>
-            <span>Local: Na aula do mentor</span>
-            <span>Colaboradores: Rodrigo, Randall, Peterson, Sheila</span>
-        </div>
-        <nav tabindex="0">
-            <a href="#" class="menu-burger-container">
-                <i class="menu-burger"></i>
-            </a>
+   
+    <main class='general-container'>
 
-            <ul class="links-container">
-                <li>
-                    <a href="#" aria-label="Acesso ao HOME">HOME</a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Acesso a página personagens">PERSONAGENS</a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Acesso a página Galeria">GALERIA</a>
-                </li>
-                <li>
-                    <a href="#" aria-label="Acesso a página Vídeos">VÍDEOS</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="content-container">
-            <h1>
-                Gato de botas
-            </h1>
-            <span class="movie-title">
-                O ultimo Desejo
-            </span>
-
-            <p class="movie-text">
-                O felino favorito de todos, amante de leche, fanfarrão e desafia o medo retorna em uma nova aventura
-                o ousado gato fora da lei Gato de Botas descobre que sua paixão pelo perigo e o desrespeito pela
-                segurança cobraram seu preço.
-            </p>
-            <button class="movie-button" onclick="openModal('dv-modal')">
-                Assista o Trailer &RightArrow;
-            </button>
-            <!-- modal -->
-            <div id="dv-modal" class="modal">
-                <div class="modal-content">
-                   
-                    <div class="modal-body">
-                        <div class="modal-fechar">
-                            <button class=" movie-button movie-button-x" onclick="closeModal('dv-modal')">X</button>
-                        </div>
-                        <iframe id="video" width="560" height="315" src="https://youtube.com/embed/qtHcEfpYIow"
-                            title="Trailer oficial" frameboarder="1"
-                            allow="accelerometer; autopaly; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
+        <div id="dv-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-fechar">
+                    <button class=" movie-button movie-button-x" id="close-button">X</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="video" width="560" height="315" src="https://youtube.com/embed/qtHcEfpYIow"
+                        title="Trailer oficial" frameboarder="1"
+                        allow="accelerometer; autopaly; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
-
         </div>
 
-        <div class="divFoto">
-            <div></div>
-        </div>
-        <div class="social-container">
-            <ul>
-                <li class="you">
-                    <a href="https://www.youtube.com/marvel" target="_blank">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </li>
-                <li class="twitter">
-                    <a href="https://twitter.com/marvel" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="instagram">
-                    <a href="https://www.instagram.com/marvel/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="facebook">
-                    <a href="ttps://www.facebook.com/MarvelBR" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <header>
+            <a href="https://www.dreamworks.com/movies/puss-in-boots-the-last-wish">
+                <img src="./public/img/dream.svg" alt="Logo da dreamworks">
+            </a>
+            <div class="divEstreia">
+                <h2>
+                    Data de estreia: 13/03/2023
+                </h2>
+                <span>Local: Na aula do mentor</span>
+                <span>Colaboradores: Rodrigo, Randall, Peterson, Sheila</span>
+            </div>
+            <nav tabindex="0">
+                <a href="#" class="menu-burger-container">
+                    <i class="menu-burger"></i>
+                </a>
+    
+                <ul class="links-container">
+                    <li>
+                        <a href="#" aria-label="Acesso ao HOME">HOME</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Acesso a página personagens">PERSONAGENS</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Acesso a página Galeria">GALERIA</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="Acesso a página Vídeos">VÍDEOS</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+
+            <div class="content-container">
+                <h1 class="principal-title-style">
+                    Gato de botas
+                </h1>
+                <h2 class="movie-title default-text-style">
+                    O ultimo Desejo
+                </h2>
+    
+                <p class="movie-text default-text-style">
+                    O felino favorito de todos, amante de leche, fanfarrão e desafia o medo retorna em uma nova aventura
+                    o ousado gato fora da lei Gato de Botas descobre que sua paixão pelo perigo e o desrespeito pela
+                    segurança cobraram seu preço.
+                </p>
+                <button class="movie-button" id="movie-button">
+                    Assista o Trailer &RightArrow;
+                </button>
+            </div>
+
+            <section class="plus-section-style">
+                <div class="plus-section-content-style">
+                    <div class="divFoto">
+                        <div></div>
+                    </div>
+        
+                    <div class="social-container">
+                        <ul>
+                            <li class="you">
+                                <a href="https://www.youtube.com/marvel" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/marvel" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/marvel/" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="facebook">
+                                <a href="ttps://www.facebook.com/MarvelBR" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <footer>
+            <span class="default-text-style">Copyright 2023 © | Gatos e cia Growdev</span>
+        </footer>
     </main>
-
-    <footer>
-        Copyright 2023 © | Gatos e cia Growdev
-    </footer>
 
 </body>
 

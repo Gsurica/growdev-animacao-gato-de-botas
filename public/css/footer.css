@@ -1,5 +1,12 @@
 footer{
-    text-align: center;
-    font-style: italic;
-    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.default-text-style {
+    color: white;
 }

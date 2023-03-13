@@ -1,21 +1,6 @@
-main {
-    flex-grow: 1;
-    display: flex;
-    position: relative;
-
-}
 
 .divFoto {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+    margin-right: 30px;
 }
 
 .divFoto div {
@@ -25,7 +10,7 @@ main {
     width: 200px;
     height: 200px;
     animation: shadow 5s infinite;
-
+    animation: float 6s ease-in-out infinite;
 }
 
 @keyframes shadow {
@@ -50,15 +35,11 @@ main {
 }
 
 .content-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
+    padding: 30px;
 }
 
 
-.content-container h1 {
+.principal-title-style {
     font-size: 7rem;
     display: flex;
     flex-direction: column;
@@ -66,7 +47,6 @@ main {
     color: #A6600A;
     font-family: 'Rakkas', cursive;
     text-shadow: 2px 2px 2px black, 0 0 1em #BF820F, 0 0 0.2em #733702, #D9AB23 0 -4px;
-
 }
 
 .content-container h1 span {
@@ -83,10 +63,25 @@ main {
     transform: translateY(-20px)
 }
 
+.plus-section-style {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.plus-section-content-style {
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    margin-right: 20px;
+    align-items: center;
+}
+
 .movie-text {
-    width: 550px;
+    max-width: 550px;
     font-size: 1.1rem;
     font-weight: 100;
+    color: white;
 }
 
 .movie-button {
@@ -104,6 +99,7 @@ main {
     animation-delay: 2s;
     border: none;
     color: #fff;
+    cursor: pointer;
 }
 
 .movie-button-x {
