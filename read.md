@@ -10,12 +10,12 @@ que eu consertei para o melhor funcionamento do esperado comportamento.</h2>
 
 Vocês utilizam muita coisa que poderia ter sido "capada" do código e percebi uma grande utilização da tag body,
 não está errado, pelo contrário, pode ser utilizada, no entanto, não é considerada uma boa prática adicionar tantos elementos 
-na tag como estava. Mas, então? qual o melhor? Sempre que forem fazer uma aplicação web, apliquem em primeira mão uma tag <main>
+na tag como estava. Mas, então? qual o melhor? Sempre que forem fazer uma aplicação web, apliquem em primeira mão uma tag main
 está tag tera um css padrão que irá ser aplciado em todos os elementos filhos que vocês quiserem e esta tag obrigatóriamente terá que ter 
-width e height em cobrimento de toda a tela. Contudo, posso utilizar tag <body> padrão sem a tag <main>? Claro! Porém, deve-se ter em mente 
+width e height em cobrimento de toda a tela. Contudo, posso utilizar tag body padrão sem a tag main? Claro! Porém, deve-se ter em mente 
 que ao utilizar este método, vocês deverão aplicar containers individuais para cada filho que forem dispor em tela! Tudo bem? 
 
-P.S: A tag <body> não necessita do valor css position = relative. Ela sempre será relativa, é o comportamento padrão. :)
+P.S: A tag body não necessita do valor css position = relative. Ela sempre será relativa, é o comportamento padrão. :)
 P.S: Se algo que eu falei até agora vocês estvam fazendo e não estava funcionando, possivelmente existia um "vazamento" de css,
 muito comum e sempre atrapalha na construção dos sites.
 
@@ -52,7 +52,7 @@ Considerem a "classe do filho" é uma classe geral que todos os containers filho
 "classe auxiliar", nela geralmente é utilizada valores de estilo do css que todos os componentes filhos costumam compartilhar. Sendo assim,
 é uma ótima prática e ajuda vocês a dividirem melhor o css. É nesta "classe auxiliar" que vocês irão aplicar os valores de estilos padrão que cada container deve ter. Você pode variar está classe de acordo á sua necessidade. 
 
-A semântica de vocês estava boa, como dito antes, mudei apenas a tag <body> para uma tag <main> que engloba os valores css abundantes que estavam na tag <body>. Podemos ter duas tag <main> no mesmo arquivo? Sim! A resposta para a utilização da tag <main> sempre será o container pai que ela esta localizada! Exemplo: 
+A semântica de vocês estava boa, como dito antes, mudei apenas a tag body para uma tag main que engloba os valores css abundantes que estavam na tag body. Podemos ter duas tag main no mesmo arquivo? Sim! A resposta para a utilização da tag main sempre será o container pai que ela esta localizada! Exemplo: 
 
 <!-- 
 "<main> 
@@ -68,7 +68,7 @@ A semântica de vocês estava boa, como dito antes, mudei apenas a tag <body> pa
 </main>"" 
 -->
 
-A primeira tag <main> diz respeito a todos os componentes filhos, incluindo as sections. Logo, a segunda tag main, diz respeito apenas ao conteudo da <section>! ou seja, a segunda tag <main> será o conteudo principal da <section> em que ela está!
+A primeira tag main diz respeito a todos os componentes filhos, incluindo as sections. Logo, a segunda tag main, diz respeito apenas ao conteudo da section! ou seja, a segunda tag main será o conteudo principal da section em que ela está!
 
 <strong>terceira coisa, Javascript: </strong>
 Esta parte aqui também estava boa, faltava apenas uma questão a ser colocada no componente de vocês. O valor css "display: none" como padrão. Lembrem-se, o css sempre vai ser reinterado na página, sempre que for recarregada, neste caso, o valor padrão tende ser "none" para assim aplicar a lógica e conseguir incrementar na modal o "display: flex". Me dispos a adicionar duas outras maneiras de mexer com o Javascript somente para viés de estudos, para mostrar-lhes que sempre há uma alternativa. Para a utilização de vocês basta adicionar novamente os onClick em cada botão e descomentar a parte comentada!
