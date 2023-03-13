@@ -1,0 +1,44 @@
+html,
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, #000, #000D 35%, #0000), url(../img/151044.jpg);
+    background-size: cover;
+    background-position: right;
+
+
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    flex-direction: column;
+    padding: 30px 100px 50px 100px;
+    animation: zoom 3s;
+
+}
+
+@media (max-width:768px) {
+    body {
+        padding: 30px 30px 25px 30px;
+        background-image: url(../img/151044.jpg);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: darken;
+    }
+    
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}

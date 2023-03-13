@@ -1,0 +1,201 @@
+main {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+
+}
+
+.divFoto {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.divFoto div {
+    background-image: url(../img/gato1.jpg);
+    background-size: contain;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    animation: shadow 5s infinite;
+
+}
+
+@keyframes shadow {
+
+    50% {
+        box-shadow: #733702 2px 4px 4px, -4px -4px 4px #5c2d04;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0rem);
+    }
+
+    50% {
+        transform: translatey(-2rem);
+    }
+
+    100% {
+        transform: translatey(0rem);
+    }
+}
+
+.content-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+
+.content-container h1 {
+    font-size: 7rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: #A6600A;
+    font-family: 'Rakkas', cursive;
+    text-shadow: 2px 2px 2px black, 0 0 1em #BF820F, 0 0 0.2em #733702, #D9AB23 0 -4px;
+
+}
+
+.content-container h1 span {
+    font-size: 2rem;
+    font-weight: 200;
+    transform: translateY(30px);
+    color: #fff;
+}
+
+.movie-title {
+    font-size: 2.6rem;
+    font-style: italic;
+    color: #fff;
+    transform: translateY(-20px)
+}
+
+.movie-text {
+    width: 550px;
+    font-size: 1.1rem;
+    font-weight: 100;
+}
+
+.movie-button {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 200;
+    border-radius: 10px;
+    background: radial-gradient(circle, #D9AB23, #A6600A, #733702);
+    margin-top: 30px;
+    animation: mymove 5s infinite;
+    animation-delay: 2s;
+    border: none;
+    color: #fff;
+}
+
+.movie-button-x {
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+}
+
+@keyframes mymove {
+    50% {
+        box-shadow: 2px 2px 10px #3f1f03, -2px -2px 10px #D9AB23
+    }
+}
+
+.social-container {
+    width: 48px;
+}
+
+.social-container ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-container li {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 1s;
+}
+
+.social-container i {
+    font-size: 1.5rem;
+}
+
+.social-container .you:hover {
+    background-color: #E62721;
+    border-color: #E62721;
+}
+
+.social-container .twitter:hover {
+    background-color: #546ae4;
+    border-color: #546ae4;
+}
+
+.social-container .instagram:hover {
+    background-color: #B114C3;
+    border-color: #B114C3;
+}
+
+.social-container .facebook:hover {
+    background-color: #1b38db;
+    border-color: #1b38db;
+}
+
+@media (max-width:768px) {
+    .content-container {
+        justify-content: flex-end;
+        margin-bottom: 50px;
+    }
+
+    .content-container h1 {
+        font-size: 4rem;
+    }
+
+    .content-container h1 span {
+        font-size: 1.5rem;
+        transform: translateY(15px)
+    }
+
+    .movie-title {
+        font-size: 1.45rem;
+        transform: translateY(5px)
+    }
+
+    .movie-text {
+        display: none;
+    }
+
+    .social-container {
+        display: none;
+    }
+
+    .divFoto,
+    .divEstreia {
+        display: none;
+    }
+}

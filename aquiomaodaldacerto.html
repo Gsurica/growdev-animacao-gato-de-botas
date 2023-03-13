@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal HTML</title>
+<link rel="stylesheet" href="./public/css/modal.css">
+<link rel="stylesheet" href="./public/css/main.css">
+<script src="./public/js/modal.js" defer></script>
+
+</head>
+
+<body>
+
+
+    <button class="btn movie-button" onclick="openModal('dv-modal')">Abrir modal</button>
+
+
+    <div id="dv-modal" class="modal">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <div class="modal-fechar">
+                    <button class=" movie-button movie-button-x" onclick="closeModal('dv-modal')">X</button>
+                </div>
+                <iframe id="video" width="560" height="315" src="https://youtube.com/embed/qtHcEfpYIow"
+                    title="Trailer oficial" frameboarder="1"
+                    allow="accelerometer; autopaly; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
