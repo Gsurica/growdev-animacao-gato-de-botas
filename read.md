@@ -3,7 +3,7 @@
 Então, como conversei com a Sheila hoje mais cedo, ai está o conserto da modal que pediram.
 Neste documento, vou listar para vocês a correção que fiz e algumas dicas de melhora no css e no Js.
 
-<h2>No entanto, gostaria de informar que vocês foram ótimos, beleza? Portanto, existiram algunas erros 
+<h2>No entanto, gostaria de informar que vocês foram ótimos, beleza? Portanto, existiram algumas erros 
 que eu consertei para o melhor funcionamento do esperado comportamento.</h2>
 
 <strong>Primeira coisa, o CSS:</strong>
@@ -23,30 +23,30 @@ muito comum e sempre atrapalha na construção dos sites.
 Usem e abusem da utilização de componentes filhos em seus respectivos containers, uma coisa que sempre acaba quebrando uma página é a 
 utilização de um padding o margin em um componente que é utilizado por toda a aplicação. Um exemplo:
 
-<!-- <main
+main
   style="padding=20px"
->
-  <div> // componente filho
-  <div> // componente filho
-  <div> // componente filho
-</main> -->
+
+  div // componente filho
+  div // componente filho
+  div // componente filho
+main 
 
 Nesta aplicação o padding irá afetar todos os seus componentes filhos, não é proíbido e muito menos errado, contudo, ás chances de um 
 vazamento de css e uma barra de scrolling na página é muito mais alta do que sem isso. Mas, então? como posso contornar? Simples:
 
-<!-- <main
+main
   style = "valores padrões do css (margin:0;padding:0)"
->
-  <div class="classe do filho // 1">
 
-  </div> // componente filho
-  <div class="classe do filho // 2">
+  div class="classe do filho // 1"
 
-  </div> // componente filho
-  <div class="classe do filho // 3">
+  div // componente filho
+  div class="classe do filho // 2"
 
-  </div> // componente filho
-</main> -->
+  div // componente filho
+  div class="classe do filho // 3"
+
+  div // componente filho
+main -->
 
 Considerem a "classe do filho" é uma classe geral que todos os containers filho utilizam, isso é chamada de "classe de apoio" ou 
 "classe auxiliar", nela geralmente é utilizada valores de estilo do css que todos os componentes filhos costumam compartilhar. Sendo assim,
@@ -54,19 +54,19 @@ Considerem a "classe do filho" é uma classe geral que todos os containers filho
 
 A semântica de vocês estava boa, como dito antes, mudei apenas a tag body para uma tag main que engloba os valores css abundantes que estavam na tag body. Podemos ter duas tag main no mesmo arquivo? Sim! A resposta para a utilização da tag main sempre será o container pai que ela esta localizada! Exemplo: 
 
-<!-- 
-"<main> 
 
-  <section>
+main
 
-    <main>
+  section
 
-    </main>
+    main
 
-  </section>
+    main
 
-</main>"" 
--->
+  section
+
+main
+
 
 A primeira tag main diz respeito a todos os componentes filhos, incluindo as sections. Logo, a segunda tag main, diz respeito apenas ao conteudo da section! ou seja, a segunda tag main será o conteudo principal da section em que ela está!
 
